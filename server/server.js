@@ -38,6 +38,11 @@ app.get('/api/health', (req, res) => {
   res.json({ message: 'KindCommute API is running!' });
 });
 
+// Root message for base URL
+app.get('/', (req, res) => {
+  res.send('KindCommute API - use /api for endpoints');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
